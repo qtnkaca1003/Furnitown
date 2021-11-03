@@ -1,0 +1,114 @@
+.contact_page{
+    .contact{
+        width: 100vw;
+        height: 1000px;
+        background: url("../../../img/contact/bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        .container{
+           .contact_item{
+               //margin-top: 130px;
+               position: absolute;
+               top:50%;
+               left: 50%;
+               transform: translate(-50%,-50%);
+               .row{
+                   .col{
+                       h4{
+                        font-size: 12px;
+                        font-weight: bold;
+                        font-family: Arial;
+                        color: #ab9051;
+                        text-transform: uppercase;
+                        margin-bottom: 25px;
+                       }
+                       p{
+                        font-size: 12px;
+                       
+                        font-family: Arial;
+                        color: #fff;
+                        
+                        margin-bottom: 25px;
+                       }
+                   }
+               }
+            form{
+                position: relative;
+                .row{
+                    .col{
+                        .form-group{
+                            label{
+                                font-size: 12px;
+                                margin-bottom: 10px;
+                                font-family: Arial;
+                                color: #fff;
+                        
+                        
+                            }
+                            .txtArea{
+                                margin-bottom: 3px;
+                            }
+                            input{
+                                font-size: 16px;
+                                border: 0px;
+                                background: none;
+                                border-bottom: 1px solid #ab9051;
+                                margin-bottom: 20px;
+                                color: #fff;
+                            }
+                            input:focus {
+                                outline: none;
+                            }
+                            textarea{
+                                font-size: 16px;
+                                background: none;
+                                border: 0px;
+                                resize: none;
+                                line-height: 30px;
+                                overflow: hidden;
+                            }
+                            textarea:focus{
+                                outline: none;
+                                color: #fff;
+                            }
+                            .line{
+                                height: 1px;
+                                margin-top: -98px;
+                                .line1{
+                                    margin-bottom: 10px;
+
+                                }
+                                .line2{
+                                    margin-bottom: -1px;
+                                }
+                                .line3{
+                                    margin-bottom: -12px;
+                                }
+                            }
+                        }
+                    }
+                      
+                }
+                button{
+                    outline: none;
+                    cursor: pointer;
+                    padding: 10px 30px;
+                    border: 1px solid $text-cl-yl;
+                    background: #000;
+                    color: #fff;
+                    position: absolute;
+                    right: 0;
+                    //align-items: ;
+                }
+                margin-bottom: 50px;
+            }
+            .google_map{
+                margin-top: 50px;
+                margin-bottom: -170px;
+            }
+           }
+            
+        }
+    }
+}

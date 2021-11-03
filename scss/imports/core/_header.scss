@@ -1,0 +1,119 @@
+// css header
+header{
+    .header{
+        .menu_mobile{
+            display: none;
+        
+        }
+        position: absolute;
+        z-index: 10;
+
+        .share{
+            display: flex;
+            li{
+                margin-left: 43px;
+                margin-top: 50px;
+                a{
+                    text-decoration: none;
+                    //color: #000;
+                    font-family: avh;
+                    text-transform: uppercase;
+                }
+            }
+        }
+       
+    }
+    .menu_scroll{
+        height: 70px;
+        width: 100%;
+        background: #132539;
+        display: none;
+        position: fixed;
+        z-index: 23;
+        margin-top: 0px;
+        .container{
+            ul{
+                display: flex;
+                align-items: center;
+                justify-content: space-around;
+                align-self: center;
+                height: 100%;
+                li{
+                    height: 100%;
+                    a{
+                        display: flex;
+                        align-items: center;
+                        font-size: 11px;
+                        font-family: Arial;
+                        text-transform: uppercase;
+                        font-weight: bold;
+                        height: 70px;
+                        color: $text-white-cl;
+                        text-decoration: none;
+                        &:hover{
+                            color: #ffffff78;
+                        }
+
+                        >img{
+                            display: flex;
+                        }
+                    }
+                }
+            }
+        }
+       
+    }
+    .active{
+        display: block;
+        
+    }
+}
+header{
+    .header_detail{
+        padding-left: 15px;
+        padding-right: 15px;
+        height: 100px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+        ul{
+            
+            height: 100%;
+            display: flex;
+            display: flex;
+            align-items: center;
+            li{
+                padding-right: 30px;
+                a{
+                    text-decoration: none;
+                    color: $text-black-cl;
+                    font-family: avh;
+                    text-transform: uppercase;
+                }
+            }
+        }
+        .back{
+            height: 100%;
+            display: flex;
+            align-items: center;
+            a{
+                color: $text-black-cl;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-size: 11px;
+                font-weight: bold;
+                img{
+                    margin-left: 20px;
+                }
+            }
+        }
+        
+    }
+    
+}
+

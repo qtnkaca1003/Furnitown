@@ -1,0 +1,108 @@
+.about_page{
+    .about_header{
+        .container{
+            .about_item{
+                
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                h2{
+                    margin-top: 180px;
+                    margin-bottom: 30px;
+                    font-size: 44px;
+                    font-family: eb;
+                    color: $text-cl-yl;
+                    text-transform: uppercase;
+                }
+                p{
+                    margin-bottom: 30px;
+                    font-size: 14px;
+                    font-family: Arial;
+                    text-transform: uppercase   ;
+                }
+                .text{
+                    text-align: center;
+                    max-width: 780px;
+                    text-transform: initial;
+                    line-height: 40px;
+                }
+                .line{
+                    margin-bottom: 115px;
+                }
+            }
+        }
+    }
+    .about_boby{
+        .container{
+            .row{
+                .col{
+                    &__text{
+                        margin-top: -125px;
+                        max-width: 350px;
+                        line-height: 45px;
+                        font-size: 14px;
+                        font-family: Arial;
+                    }
+                }
+            }
+            .row_mb{
+                display: none;
+            }
+        }
+    }
+    .about_footer{
+        .container{
+
+            .text{
+                margin-top: 165px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                p{
+                    max-width: 690px;
+                    font-size: 14px;
+                    font-family: Arial;
+                    line-height: 25px;
+                    margin-bottom: 40px;
+                }
+                .text_name{
+                    margin-bottom: 20px;
+                }
+                .text_last{
+                    max-width: 580px;
+                    text-align: center;
+                    margin-top: 90px;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 426px) {
+
+    .about_page{
+        .about_boby{
+            .container{
+                .row{
+                    display: none;
+                }
+                .row_mb{
+                    display: flex;
+                    flex-direction: column;
+                    align-self: center;
+                    justify-content: center;
+                    .col__text{
+                        text-align: center;
+                            margin-top: -125px;
+                            max-width: 350px;
+                            line-height: 45px;
+                            font-size: 14px;
+                            font-family: Arial;
+                        }
+                    
+                }
+            }
+        }
+    }
+}

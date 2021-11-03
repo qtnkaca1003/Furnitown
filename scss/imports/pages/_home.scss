@@ -1,0 +1,852 @@
+// CSS HOMEPAGE
+
+.homepage {
+    .slider {
+        width: 100%;
+        height:100vh;
+        //ssposition: relative;
+        overflow: hidden;
+        .slider__list {
+            width: 100%;
+            height: 100%;
+            .slider__list-item {
+                width: 100%;
+                height: 100%;
+                position: relative;
+
+                .imgslide {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        min-width: 100%;
+                        min-height: 100%;
+                    }
+                    //@include midimg(100%);
+                }
+                .content {
+                    @include mid;
+                    z-index: 10;
+                    h2 {
+                        text-align: center;
+                        font-family: eb;
+                        color: $text-white-cl;
+                        font-size: 80px;
+                        text-transform: uppercase;
+                        line-height: normal;
+                        //margin-bottom: -20px;
+                        transform: translateY(-50px);
+                       
+                        &::after {
+                            content: "";
+                            width: 770px;
+                            height: 1px;
+                            background: $white-cl;
+                            display: block;
+                        }
+                    }
+                    p {
+                        margin-top: 10px;
+                        color: $text-white-cl;
+                        text-align: center;
+                        font-family: avh;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        transform: translateY(50px);
+                    }
+                    a {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        margin: 0 auto;
+                        position: relative;
+                        transform: translateY(50px);
+                        text-decoration: none;
+                        text-align: center;
+                        background: #171717;
+                        padding: 15px 35px;
+                        color: $text-white-cl;
+                        border-radius: 5px;
+                        font-size: 11px;
+                        text-transform: uppercase;
+                        width: 150px;
+                    }
+                    h2,p,a{
+                        opacity: 1  ;
+                        visibility: hidden;
+                        transition: 0.6s;
+                        transition-delay: 0.3s;
+                        //transform: translateY(0);
+                    }
+                }
+            }
+            .slider__list-item.is-selected{
+                .content{
+                    h2,a{
+                        opacity: 1;
+                        visibility: visible;
+                        transition: 0.6s;
+                        transform: translateY(0px);
+                        transition-delay: 0.3s;
+                    }
+                }
+            }
+        }
+        &__control {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            .mouse {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                .mouse__scroll {
+                    //animation: move 3s infinite;
+                    width: 1px;
+                    height: 120px;
+                    position: relative;
+                    padding-bottom: 15px;
+                    //opacity: 1;
+                }
+                .mouse__img {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+    }
+    .product_mb {
+        display: none;
+    }
+    .about {
+        display: none;
+    }
+    .product {
+        .container {
+            .room_work_living {
+                padding-top: 120px;
+                .content {
+                    max-width: 380px;
+                    line-height: 40px;
+                    font-size: 12px;
+                }
+                .work_room {
+                    margin-top: 65px;
+                    .product-item {
+                        .title {
+                        }
+                        img {
+                            margin-top: 30px;
+                        }
+                    }
+                }
+                .living_room {
+                    .product-item {
+                    }
+                }
+            }
+            .kitchen_room {
+                padding-top: 60px;
+                .product-item {
+                }
+            }
+            .room_bed_bath {
+                padding-top: 60px;
+
+                .content {
+                    text-align: right;
+
+                    .content__text {
+                        position: absolute;
+
+                        right: 0;
+                        padding-top: 70px;
+                        z-index: 10;
+                        line-height: 40px;
+                        font-family: ebi;
+                        color: $text-white-cl;
+                        max-width: 425px;
+                    }
+                    .img {
+                        img {
+                            position: absolute;
+                            bottom: -30px;
+                            right: -50px;
+                        }
+                    }
+                }
+                .bed_room {
+                    
+                    .product-item {
+                       
+                    }
+                }
+                .bath_room {
+                    .product-item{
+                      
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1099px) {
+    .btn__menu {
+        //top: 12%;
+    }
+    .btn__menu {
+        width: 160px;
+        height: 160px;
+
+        &:hover {
+            width: 185px;
+        }
+    }
+
+    .homepage {
+        .slider {
+            &__list {
+                &-item {
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        //@include midimg(100%);
+                    }
+                    .content {
+                        top: 12%;
+                        left: 50%;
+                        h2 {
+                            margin-top: -80px;
+                            font-size: 60px;
+                            &::after {
+                                content: "";
+                                width: 700px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .product {
+            .container {
+                .room_bed_bath {
+                    .content {
+                        .content__text {
+                            position: absolute;
+
+                            right: 0;
+                            padding-top: 70px;
+                            z-index: 10;
+                            line-height: 40px;
+                            font-family: ebi;
+                            color: $text-white-cl;
+                            max-width: 425px;
+                        }
+                        .img {
+                            img {
+                                position: absolute;
+                                bottom: -40px;
+                                right: -20px;
+                            }
+                        }
+                    }
+                    .bed_room {
+                        .product-item {
+                        }
+                    }
+                    .bath_room {
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 991px) {
+    .btn__menu {
+        //top: 14%;
+    }
+    .btn__menu {
+        width: 140px;
+        height: 140px;
+
+        &:hover {
+            width: 165px;
+        }
+    }
+
+    .homepage {
+        .slider {
+            .slider__list {
+                .slider__list-item {
+                    .imgslide {
+                    }
+                    .content {
+                        h2 {
+                            font-size: 60px;
+                            &::after {
+                                width: 700px;
+                                height: 1px;
+                            }
+                        }
+                    }
+                }
+            }
+            &__control {
+                position: absolute;
+                bottom: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+                .mouse {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    .mouse__scroll {
+                        //animation: move 3s infinite;
+                        width: 1px;
+                        height: 120px;
+                        position: relative;
+                        padding-bottom: 15px;
+                        //opacity: 1;
+                    }
+                    .mouse__img {
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        .product {
+            .container {
+                .room_work_living {
+                    padding-top: 120px;
+                    .content {
+                        max-width: 380px;
+                        line-height: 40px;
+                        font-size: 12px;
+                    }
+                    .work_room {
+                        margin-top: 65px;
+                        .product-item {
+                            .title {
+                            }
+                            img {
+                                margin-top: 30px;
+                            }
+                        }
+                    }
+                    .living_room {
+                        .product-item {
+                            height: 100%;
+                            .title {
+                                padding-bottom: 125px;
+                            }
+                        }
+                    }
+                }
+
+                .room_bed_bath {
+                    padding-top: 60px;
+                    margin-bottom: 0;
+
+                    .content {
+                        text-align: right;
+
+                        .content__text {
+                            position: absolute;
+
+                            right: 0;
+                            padding-top: 70px;
+
+                            line-height: 40px;
+                            font-family: ebi;
+                            color: $text-white-cl;
+                            max-width: 425px;
+                        }
+                        .img {
+                            img {
+                                position: absolute;
+                                bottom: -87px;
+                                right: 0px;
+                            }
+                        }
+                    }
+                    .bed_room {
+                        .product-item {
+                        }
+                    }
+                    .bath_room {
+                    }
+                }
+            }
+        }
+    }
+
+    .pd {
+        margin-top: -255px;
+    }
+}
+@media (max-width: 830px) {
+    .homepage {
+        .product {
+            .container {
+                .room_bed_bath {
+                    padding-top: 60px;
+
+                    .content {
+                        text-align: right;
+
+                        .content__text {
+                            max-width: 390px;
+                        }
+                        .img {
+                            img {
+                                position: absolute;
+                                bottom: -87px;
+                                right: 0px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+@media (max-width: 768px) {
+    //Element
+    .title {
+        padding-bottom: 40px;
+        padding-top: 60px;
+        font-family: avh;
+        text-transform: uppercase;
+        font-size: 22px;
+    }
+    .pd {
+        margin-top: -490px;
+    }
+    //Component
+    header {
+        .header {
+            height: 110px;
+            background: #132539;
+            width: 100%;
+            position: fixed;
+            z-index: 10;
+            .share {
+                display: none;
+            }
+            .menu_mobile {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                ul {
+                    display: flex;
+                    align-items: center;
+                    li {
+                        a {
+                            margin-left: 10px;
+                            color: $text-white-cl;
+                            text-decoration: none;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                .logo {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+        }
+    }
+    .btn__menu {
+        display: none;
+    }
+    //PAGE
+    .homepage {
+        .slider {
+            height: 60vh;
+            width: 100%;
+            &__list {
+                height: 100%;
+                width: 100%;
+                &-item {
+                    width: 100%;
+                    height: 100%;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        @include midimg();
+                    }
+                    .content {
+                        display: none;
+                    }
+                }
+            }
+            &__control {
+                display: none;
+            }
+        }
+        .about {
+            display: block;
+            //width: 100%;
+            .content {
+                @include mid(true);
+                flex-direction: column;
+                //width: 100%;
+                margin-top: 90px;
+                //position: relative;
+                h2 {
+                    text-align: center;
+                    margin-top: -80px;
+                    position: relative;
+                    color: $text-black-cl;
+                    font-size: 65px;
+                    font-family: eb;
+                    text-transform: uppercase;
+                    &::after {
+                        content: "";
+                        width: 520px;
+                        height: 1px;
+                        background: #171717;
+                        display: block;
+                        //@include mid;
+                        //top:100%;
+                    }
+                }
+                p {
+                    margin-top: 60px;
+                    color: $text-black-cl;
+                    text-align: center;
+                    font-family: avh;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                }
+                a {
+                    //position: absolute;
+                    margin-top: 65px;
+                    //padding-left: 20px;
+                    text-decoration: none;
+                    text-align: center;
+                    background: #171717;
+                    padding: 15px 35px;
+                    color: $text-white-cl;
+                    border-radius: 5px;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    width: 150px;
+                }
+            }
+        }
+        .product {
+            display: none;
+        }
+        .product_mb {
+            display: block;
+
+            .container {
+                .room_bed_bath {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                    .content {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        .content__text {
+                            max-width: 550px;
+                            line-height: 45px;
+                            padding-top: 110px;
+                            color: $text-white-cl;
+                            font-family: ebi;
+                        }
+                        .img {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .room_work_living {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+                .kitchen_room {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) and (max-width: 657px) {
+    header {
+        .header {
+            height: 50px;
+            background: #132539;
+            width: 100%;
+            position: fixed;
+            z-index: 10;
+            .share {
+                display: none;
+            }
+            .menu_mobile {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                ul {
+                    display: flex;
+                    align-items: center;
+                    li {
+                        a {
+                            margin-left: 10px;
+                            color: $text-white-cl;
+                            text-decoration: none;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                .logo {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+    .homepage {
+      
+            .slider {
+                height: 70vh;
+                width:100vw;
+                &__list {
+                    height: 100%;
+                    width: 100%;
+                    &-item {
+                        width: 100%;
+                        height: 100%;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            //@include midimg();
+                        }
+                        .content {
+                            display: none;
+                        }
+                    }
+                }
+                &__control {
+                    display: none;
+                }
+            }
+        
+        .about {
+            display: block;
+            //width: 100%;
+            .content {
+                @include mid(true);
+                flex-direction: column;
+                //width: 100%;
+                margin-top: 90px;
+                //position: relative;
+                h2 {
+                    text-align: center;
+                    margin-top: -80px;
+                    position: relative;
+                    color: $text-black-cl;
+                    font-size: 30px;
+                    font-family: eb;
+                    text-transform: uppercase;
+                    &::after {
+                        content: "";
+                        width: 320px;
+                        height: 1px;
+                        background: #171717;
+                        display: block;
+                        //@include mid;
+                        //top:100%;
+                    }
+                }
+                p {
+                    max-width: 300px;
+                    margin-top: 60px;
+                    color: $text-black-cl;
+                    text-align: center;
+                    font-family: avh;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                }
+                a {
+                    //position: absolute;
+                    margin-top: 65px;
+                    //padding-left: 20px;
+                    text-decoration: none;
+                    text-align: center;
+                    background: #171717;
+                    padding: 15px 35px;
+                    color: $text-white-cl;
+                    border-radius: 5px;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    width: 150px;
+                }
+            }
+        }
+        .product_mb {
+            display: block;
+
+            .container {
+                .room_bed_bath {
+                    .content {
+                        .content__text {
+                            max-width: 550px;
+                            line-height: 45px;
+                            padding-top: 110px;
+                            color: $text-white-cl;
+                            font-family: ebi;
+                        }
+                        .img {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .room_work_living {
+                }
+                .kitchen_room {
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 315px) and (max-width: 360px) {
+   header {
+        .header {
+            height: 50px;
+            background: #132539;
+            width: 100%;
+            position: fixed;
+            z-index: 10;
+            .share {
+                display: none;
+            }
+            .menu_mobile {
+                height: 100%;
+                display: flex;
+                justify-content: space-between;
+                ul {
+                    display: flex;
+                    align-items: center;
+                    li {
+                        a {
+                            margin-left: 10px;
+                            color: $text-white-cl;
+                            text-decoration: none;
+                            font-size: 16px;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+                .logo {
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    img{
+                        width: 50px;
+                    }
+                }
+            }
+        }
+    }
+    .homepage {
+        .about {
+            display: block;
+            //width: 100%;
+            .content {
+                @include mid(true);
+                flex-direction: column;
+                //width: 100%;
+                margin-top: 90px;
+                //position: relative;
+                h2 {
+                    text-align: center;
+                    margin-top: -80px;
+                    position: relative;
+                    color: $text-black-cl;
+                    font-size: 30px;
+                    font-family: eb;
+                    text-transform: uppercase;
+                    &::after {
+                        content: "";
+                        width: 280px;
+                        height: 1px;
+                        background: #171717;
+                        display: block;
+                        //@include mid;
+                        //top:100%;
+                    }
+                }
+                p {
+                    margin-top: 60px;
+                    color: $text-black-cl;
+                    text-align: center;
+                    font-family: avh;
+                    text-transform: uppercase;
+                    font-size: 12px;
+                    max-width: 250px;
+                }
+                a {
+                    //position: absolute;
+                    margin-top: 65px;
+                    //padding-left: 20px;
+                    text-decoration: none;
+                    text-align: center;
+                    background: #171717;
+                    padding: 15px 35px;
+                    color: $text-white-cl;
+                    border-radius: 5px;
+                    font-size: 11px;
+                    text-transform: uppercase;
+                    width: 150px;
+                }
+            }
+        }
+        .product_mb {
+            display: block;
+
+            .container {
+                .room_bed_bath {
+                    .content {
+                        .content__text {
+                            max-width: 550px;
+                            line-height: 45px;
+                            padding-top: 110px;
+                            color: $text-white-cl;
+                            font-family: ebi;
+                        }
+                        .img {
+                            display: flex;
+                            justify-content: center;
+                        }
+                    }
+                }
+                .room_work_living {
+                }
+                .kitchen_room {
+                }
+            }
+        }
+    }
+}

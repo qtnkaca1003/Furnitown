@@ -1,0 +1,307 @@
+// css footer
+footer{
+    background: #132539;
+    //height: 945px;
+    width: 100%;
+    //position: relative;
+  
+    bottom: 0;
+    .footer{
+        .container{
+            .content{
+                padding-top: 120px;
+                padding-bottom: 70px;
+               .logo{
+                  
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                   &::after{
+                       position: relative;
+                       content: "";
+                       width: 430px;
+                       background: #665d49;
+                       height: 1px;
+                       display: block;
+                        top: -40px;
+                        right: -290px;
+                   }
+                   &::before{
+                    position: relative;
+                    content: "";
+                    width: 430px;
+                    background:  #665d49;
+                    height: 1px;
+                    display: block;
+                    top: 30px;
+                    left: -290px;
+                    //transform: translateY(-50%);
+
+
+                   }
+               }
+                .text_street{
+                    padding-top: 60px;
+                    text-align: center;
+                    color: $text-white-cl;
+                    letter-spacing: 1px;
+                    text-transform: uppercase;
+                    line-height: 26px;
+                    font-size: 11px;
+                }
+                .to_top{
+                   display: flex;
+                   justify-content: flex-end;
+                   margin-top: 70px;
+                    a{ position: relative;
+                        transform: rotate(90deg);
+                        text-align: right;
+                        text-decoration: none;
+                        color: #9b9c9d;
+                        right: -45px;
+                        &::before{
+                            position: absolute;
+                            content: "";
+                            width: 130px;
+                            height: 1px;
+                            display: block;
+                            background: #9b9c9d;
+                            left: -155px;
+                            top:10px;
+
+                        }
+                    }
+                    
+                }
+
+            }
+         
+           
+        }
+      
+    }
+}
+@media (max-width: 1199px){
+    .pd{
+        margin-top: -370px;
+    }
+    footer{
+        
+        .footer{
+            .container{
+                .content{
+                    .to_top{
+                       
+                        a{ 
+                            right: -85px;
+                            
+                        }
+                        
+                    }
+    
+                }
+             
+               
+            }
+          
+        }
+        
+    }
+    
+}
+@media (max-width: 1099px){
+    
+    footer
+    {
+        .footer{
+            .container{
+                .content {
+                    .logo{
+                        &::after{
+                        width: 320px;
+                        }
+                        &::before{
+                            width: 320px;
+                            }
+                    }
+                    .to_top{
+                        a{
+                            right: -40px;
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+    
+}
+@media (max-width: 991px){
+
+    .pd{
+        margin-top: -260px;
+    }
+    footer{
+    
+        .footer{
+            .container{
+                .content {
+                    .logo{
+                        &::after{
+                        width: 300px;
+                        }
+                        &::before{
+                            width: 300px;
+                            }
+                    }
+                    .to_top{
+                        a{
+                            right: -140px;
+                            
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+}
+@media (max-width: 910px){
+    footer{
+    
+        .footer{
+            .container{
+                .content {
+                    .logo{
+                        &::after{
+                        width: 250px;
+                        right: -250px;
+                        }
+                        &::before{
+                            left: -250px;
+                            width: 250px;
+                            }
+                    }
+                    .to_top{
+                        a{
+                            right: -80px;
+                            
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+}
+@media (max-width: 830px){
+    footer{
+    
+        .footer{
+            .container{
+                .content {
+                    .logo{
+                        &::after{
+                        width: 250px;
+                        right: -200px;
+                        }
+                        &::before{
+                            left: -200px;
+                            width: 250px;
+                            }
+                    }
+                    .to_top{
+                        a{
+                            right: -30px;
+                            
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+}
+@media(max-width: 768px){
+    footer{
+        .footer{
+            .container{
+                .content{
+                    .to_top{
+                        a{ 
+                            right: -60px;
+                            &::before{
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 375px) and (max-width: 657px) { 
+    footer{
+        .footer{
+            .container{
+                .content {
+                    .logo{
+                        &::after{
+                        width: 100px;
+                        right: -125px;
+                        }
+                        &::before{
+                            width: 100px;
+                            left: -125px;
+                            }
+                    }
+                    .text{
+                        font-size: 5px;
+                    }
+                    .to_top{
+                       
+                        a{
+                            font-size: 10px;
+                            right: -10px;
+                            &::before{
+                                top: 4px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+}
+@media (min-width: 315px) and (max-width: 360px) {
+    footer{
+        .footer{
+            .container{
+                .content {
+                    .logo{
+                        &::after{
+                        width: 50px;
+                        right: -125px;
+                        }
+                        &::before{
+                            width: 50px;
+                            left: -125px;
+                            }
+                    }
+                    .text{
+                        font-size: 5px;
+                    }
+                    .to_top{
+                       
+                        a{
+                            font-size: 10px;
+                            right: -10px;
+                            &::before{
+                                top: 4px;
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        } 
+    } 
+ }
